@@ -1,0 +1,5 @@
+Manifest-Version: 1.0
+OpenIDE-Module-Localizing-Bundle: com/stackleader/drools/netbeans/Bundle.properties
+OpenIDE-Module: com.stackleader.drools.netbeans
+OpenIDE-Module-Layer: com/stackleader/drools/netbeans/layer.xml
+OpenIDE-Module-Specification-Version: 1.0.0

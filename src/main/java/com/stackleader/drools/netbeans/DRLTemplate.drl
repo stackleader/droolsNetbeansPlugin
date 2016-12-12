@@ -1,0 +1,21 @@
+<#assign licenseFirst = "/*">
+<#assign licensePrefix = " * ">
+<#assign licenseLast = " */">
+<#include "../Licenses/license-${project.license}.txt">
+
+<#if package?? && package != "">
+package ${package};
+
+</#if>
+dialect "mvel"
+
+/**
+ *
+ * @author ${user}
+ */
+rule "Rule"
+when
+
+then
+
+end

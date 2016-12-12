@@ -40,7 +40,7 @@ public class DroolsRuleCompletionItem implements CompletionItem {
             final String prefix = CompletionContext.stripLastWord(backText);
             int pos = jtc.getCaretPosition();
             Document d = jtc.getDocument();
-            d.insertString(pos, insertText, null);
+            d.insertString(pos, insertText.substring(prefix.length()), null);
         } catch (Exception ex) {
             throw new RuntimeException(ex);
         }

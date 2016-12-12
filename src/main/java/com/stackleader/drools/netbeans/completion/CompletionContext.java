@@ -13,7 +13,6 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
 package com.stackleader.drools.netbeans.completion;
 
 import java.util.HashMap;
@@ -161,8 +160,8 @@ public class CompletionContext {
                     if (o instanceof DroolsToken) {
                         operator += ((DroolsToken) o).getText();
                     }
-                    if (index4 != -1 && i >= index4 ){
-                    	break;
+                    if (index4 != -1 && i >= index4) {
+                        break;
                     }
                     if (i < locationIndex - 1) {
                         operator += " ";
@@ -365,16 +364,16 @@ public class CompletionContext {
      * Returns the variables defined in the given rule (fragment).
      * The key is the name of the variable.
      * The value is a list of 2 String:
-     *  - the first one is the class name of the variable
-     *  - the second one is the property of the given class that defines the type of this variable,
-     *    note that this property could be nested,
-     *    if this property is null then the given class is the type of the variable
+     * - the first one is the class name of the variable
+     * - the second one is the property of the given class that defines the type of this variable,
+     * note that this property could be nested,
+     * if this property is null then the given class is the type of the variable
      */
     public Map<String, String[]> getRuleParameters() {
         Map<String, String[]> result = new HashMap<String, String[]>();
         int i = 0;
         int lastLocation = -1;
-        for (Object o: parserList) {
+        for (Object o : parserList) {
             if (o instanceof DroolsToken) {
                 DroolsToken token = (DroolsToken) o;
                 if (DroolsEditorType.IDENTIFIER_VARIABLE.equals(token.getEditorType()) || DroolsEditorType.IDENTIFIER_PATTERN.equals(token.getEditorType())) {
@@ -387,7 +386,7 @@ public class CompletionContext {
                             if (obj instanceof DroolsToken) {
                                 String s = ((DroolsToken) obj).getText();
                                 if ("(".equals(s)) {
-                                    result.put(variableName, new String[] { className, null });
+                                    result.put(variableName, new String[]{className, null});
                                     break;
                                 } else {
                                     className += s;
@@ -418,13 +417,13 @@ public class CompletionContext {
                             if (obj instanceof DroolsToken) {
                                 String s = ((DroolsToken) obj).getText();
                                 if (",".equals(s) || ")".equals(s)) {
-                                    result.put(variableName, new String[] { className, propertyName });
+                                    result.put(variableName, new String[]{className, propertyName});
                                     break;
                                 } else {
                                     propertyName += s;
                                 }
                             } else {
-                                result.put(variableName, new String[] { className, propertyName });
+                                result.put(variableName, new String[]{className, propertyName});
                             }
                         }
                     }
@@ -443,9 +442,9 @@ public class CompletionContext {
             Object o = parserList.get(index);
             if (o instanceof DroolsToken) {
                 if ("(".equals(((DroolsToken) o).getText())) {
-                	if (getNextInteger(index) == integer){
-                		return index;
-                	}
+                    if (getNextInteger(index) == integer) {
+                        return index;
+                    }
 //                    o = parserList.get(index + 1);
 //                    if (o instanceof Integer) {
 //                        if (integer == (Integer) o) {
@@ -478,30 +477,50 @@ public class CompletionContext {
         while (index >= 0) {
             Object o = parserList.get(index);
             if (o instanceof Integer) {
-                return (Integer) o; 
+                return (Integer) o;
             }
             index++;
         }
         return -1;
     }
 
-	private void deriveLocation() {
-	    location = -1;
-	    int i = 0;
-	    for (Object object : parserList) {
-	        if (object instanceof Integer) {
-	            location = (Integer) object;
-	            locationIndex = i;
-	        }
-	        i++;
-	    }
-	}
-
-    private DRLParser getParser(final String text) {
-    	// TODO: support different language levels
-    	DRLParser parser = buildParser(text, LanguageLevelOption.DRL5);
-    	parser.enableEditorInterface();
-    	return parser;
+    private void deriveLocation() {
+        location = -1;
+        int i = 0;
+        for (Object object : parserList) {
+            if (object instanceof Integer) {
+                location = (Integer) object;
+                locationIndex = i;
+            }
+            i++;
+        }
     }
 
+    private DRLParser getParser(final String text) {
+        // TODO: support different language levels
+        DRLParser parser = buildParser(text, LanguageLevelOption.DRL5);
+        parser.enableEditorInterface();
+        return parser;
+    }
+
+    public static String stripLastWord(String prefix) {
+        if ("".equals(prefix)) {
+            return prefix;
+        }
+        if (prefix.charAt(prefix.length() - 1) == ' ') {
+            return "";
+        } else {
+            char[] c = prefix.toCharArray();
+            int start = 0;
+            for (int i = c.length - 1; i >= 0; i--) {
+                if (Character.isWhitespace(c[i]) || c[i] == '(' || c[i] == ':' || c[i] == ';' || c[i] == '=' || c[i] == '<' || c[i] == '>' || c[i] == '.' || c[i] == '{' || c[i] == '}') {
+                    start = i + 1;
+                    break;
+                }
+            }
+            prefix = prefix.substring(start,
+                    prefix.length());
+            return prefix;
+        }
+    }
 }

@@ -17,21 +17,30 @@ import org.netbeans.spi.editor.completion.support.CompletionUtilities;
  */
 public class DroolsRuleCompletionItem implements CompletionItem {
 
-    private String text;
+    private String displayText;
+    private String insertText;
     private int caretOffset;
 
-    public DroolsRuleCompletionItem(String text, int caretOffset) {
-        this.text = text;
+    public DroolsRuleCompletionItem(String displayText, int caretOffset) {
+        this.displayText = displayText;
+        this.insertText = displayText;
+        this.caretOffset = caretOffset;
+    }
+
+    public DroolsRuleCompletionItem(String displayText, String insertText, int caretOffset) {
+        this.displayText = displayText;
+        this.insertText = insertText;
         this.caretOffset = caretOffset;
     }
 
     @Override
     public void defaultAction(JTextComponent jtc) {
         try {
+            final String backText = jtc.getText(0, caretOffset);
+            final String prefix = CompletionContext.stripLastWord(backText);
             int pos = jtc.getCaretPosition();
-//            int pos1 = Utilities.getWordEnd(jtc, pos);
             Document d = jtc.getDocument();
-            d.insertString(pos, text, null);
+            d.insertString(pos, insertText, null);
         } catch (Exception ex) {
             throw new RuntimeException(ex);
         }
@@ -44,12 +53,12 @@ public class DroolsRuleCompletionItem implements CompletionItem {
 
     @Override
     public int getPreferredWidth(Graphics graphics, Font font) {
-        return CompletionUtilities.getPreferredWidth(text, null, graphics, font);
+        return CompletionUtilities.getPreferredWidth(displayText, null, graphics, font);
     }
 
     @Override
     public void render(Graphics g, Font defaultFont, Color defaultColor, Color bg, int width, int height, boolean selected) {
-        CompletionUtilities.renderHtml(null, text, null, g, defaultFont, defaultColor, width, height, selected);
+        CompletionUtilities.renderHtml(null, displayText, null, g, defaultFont, defaultColor, width, height, selected);
     }
 
     @Override
@@ -71,11 +80,11 @@ public class DroolsRuleCompletionItem implements CompletionItem {
     }
 
     public CharSequence getSortText() {
-        return text;
+        return displayText;
     }
 
     @Override
     public CharSequence getInsertPrefix() {
-        return text;
+        return displayText;
     }
 }

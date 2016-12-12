@@ -48,6 +48,7 @@ public class DRLLanguageHierarchy extends LanguageHierarchy<DRLTokenId> {
             new DRLTokenId("MULTILINE_COMMENT", "comment", DroolsRuleLexer.MULTILINE_COMMENT),
             new DRLTokenId("ID", "identifier", DroolsRuleLexer.ID),
             new DRLTokenId("FQN", "identifier", DroolsRuleLexer.FQN),
+            new DRLTokenId("METHOD", "method", DroolsRuleLexer.METHOD),
             new DRLTokenId("KEYWORD", "keyword", DroolsRuleLexer.KEYWORD),
             new DRLTokenId("DECLARE", "keyword", DroolsRuleLexer.DECLARE),
             new DRLTokenId("DIALECT", "keyword", DroolsRuleLexer.DIALECT),

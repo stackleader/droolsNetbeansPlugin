@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2013, Benjamin Damer
+ * Copyright (c) 2013, Benjamin Damer 
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -22,6 +22,11 @@
  * CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  * POSSIBILITY OF SUCH DAMAGE.
+ *
+ *
+ *
+ *
+ * Language updates by StackLeader Inc. 2016
  */
 grammar DroolsRule;
 
@@ -146,11 +151,21 @@ PRIMITIVE
 	:	'byte' | 'short' | 'int' | 'long' | 'float' | 'double' | 'boolean' | 'char'
 	;	
 	
+METHOD 	:	'forall' | 'eval'|'modify'|'insert'|'update' ;
+	
 KEYWORD
-	:	'and' | 'or' | 'not' | 'matches' | 'contains' |
+	:	'and' | 'from' | 'or' | 'no-loop' | 'duration' | 'auto-focus' | 'not' | 'matches' | 'contains' | 'agenda-group' |
+		'lock-on-active' | 'uleflow-group' | 'enabled' | 'date-expires' | 'date-effective' | 'activation-group' |
 		DECLARE | DIALECT | END | EXTENDS | GLOBAL | IMPORT | PACKAGE | RULE | THEN | WHEN | PRIMITIVE | SALIENCE |
 		// Java keywords
-		'new' | 'return' | 'if' | 'else' | 'do' | 'while' | 'for' | 'try' | 'catch' | 'finally' | 'break' | 'continue'
+		'new' | 'return' | 'if' | 'else' | 'do' | 'while' | 'for' | 'try' | 'catch' | 'finally' | 'break' | 'continue' |
+		'date'|  'effective'|  'expires'|  'lock'|  'on'|  'active'|  'no'|  'loop'|  'auto'|  'focus'|  'activation'|
+		'group'|  'agenda'|  'ruleflow'|  'timer'|  'calendars'|  'refract'|  'direct'|  
+		'attributes'|  'template'| 'query'|    'function'| 'excludes'|  'soundslike'|  'memberof'| 
+ 		 'in'|  'exists'|  'over'| 'entry'|  'point'|  'accumulate'|  'acc'|  'collect'|  'action'|  'reverse'|  'result'|  
+  		'init'|  'instanceof'|  'super'|  'final'|  'default'|  'switch'|  'synchronized'|  'throw'|  
+  		'assert'|  'static'|  'public'|  'protected'|  'private'|  'abstract'|  'native'|  'transient'|  'volatile'|  'strictfp'|  'throws'|
+ 		 'interface'|  'enum'|  'implements' |  'type'|  'window'|  'trait' 
 	;
 
 SEMICOLON

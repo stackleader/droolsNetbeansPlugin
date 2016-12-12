@@ -1,4 +1,4 @@
-// $ANTLR 3.5.1 C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g 2014-06-09 12:50:13
+// $ANTLR 3.5.1 /home/dcnorris/Documents/DroolsRule.g 2016-12-12 16:26:54
 package com.stackleader.drools.netbeans.grammar;
 
 import org.antlr.runtime.*;
@@ -12,7 +12,7 @@ public class DroolsRuleParser extends Parser {
     public static final String[] tokenNames = new String[]{
         "<invalid>", "<EOR>", "<DOWN>", "<UP>", "BINDING", "CHAR", "COLON", "DECLARE",
         "DIALECT", "END", "ESC_SEQ", "EXPONENT", "EXTENDS", "FLOAT", "FQN", "GLOBAL",
-        "HEX_DIGIT", "ID", "IMPORT", "INT", "KEYWORD", "META", "MULTILINE_COMMENT",
+        "HEX_DIGIT", "ID", "IMPORT", "INT", "KEYWORD", "META", "METHOD", "MULTILINE_COMMENT",
         "OCTAL_ESC", "OPERATOR", "PACKAGE", "PRIMITIVE", "RULE", "SALIENCE", "SEMICOLON",
         "SEPARATOR", "SINGLELINE_COMMENT", "STRING", "THEN", "UNICODE_ESC", "WHEN",
         "WS"
@@ -36,21 +36,22 @@ public class DroolsRuleParser extends Parser {
     public static final int INT = 19;
     public static final int KEYWORD = 20;
     public static final int META = 21;
-    public static final int MULTILINE_COMMENT = 22;
-    public static final int OCTAL_ESC = 23;
-    public static final int OPERATOR = 24;
-    public static final int PACKAGE = 25;
-    public static final int PRIMITIVE = 26;
-    public static final int RULE = 27;
-    public static final int SALIENCE = 28;
-    public static final int SEMICOLON = 29;
-    public static final int SEPARATOR = 30;
-    public static final int SINGLELINE_COMMENT = 31;
-    public static final int STRING = 32;
-    public static final int THEN = 33;
-    public static final int UNICODE_ESC = 34;
-    public static final int WHEN = 35;
-    public static final int WS = 36;
+    public static final int METHOD = 22;
+    public static final int MULTILINE_COMMENT = 23;
+    public static final int OCTAL_ESC = 24;
+    public static final int OPERATOR = 25;
+    public static final int PACKAGE = 26;
+    public static final int PRIMITIVE = 27;
+    public static final int RULE = 28;
+    public static final int SALIENCE = 29;
+    public static final int SEMICOLON = 30;
+    public static final int SEPARATOR = 31;
+    public static final int SINGLELINE_COMMENT = 32;
+    public static final int STRING = 33;
+    public static final int THEN = 34;
+    public static final int UNICODE_ESC = 35;
+    public static final int WHEN = 36;
+    public static final int WS = 37;
 
     // delegates
     public Parser[] getDelegates() {
@@ -85,7 +86,7 @@ public class DroolsRuleParser extends Parser {
 
     @Override
     public String getGrammarFileName() {
-        return "C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g";
+        return "/home/dcnorris/Documents/DroolsRule.g";
     }
 
     @Override
@@ -103,7 +104,7 @@ public class DroolsRuleParser extends Parser {
     };
 
     // $ANTLR start "program"
-    // C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:54:1: program : ( declaration )* ( WS )* ;
+    // /home/dcnorris/Documents/DroolsRule.g:54:1: program : ( declaration )* ( WS )* ;
     public final DroolsRuleParser.program_return program() throws RecognitionException {
         DroolsRuleParser.program_return retval = new DroolsRuleParser.program_return();
         retval.start = input.LT(1);
@@ -121,18 +122,18 @@ public class DroolsRuleParser extends Parser {
                 return retval;
             }
 
-            // C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:55:2: ( ( declaration )* ( WS )* )
-            // C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:55:4: ( declaration )* ( WS )*
+            // /home/dcnorris/Documents/DroolsRule.g:55:2: ( ( declaration )* ( WS )* )
+            // /home/dcnorris/Documents/DroolsRule.g:55:4: ( declaration )* ( WS )*
             {
                 root_0 = (Object) adaptor.nil();
 
-                // C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:55:4: ( declaration )*
+                // /home/dcnorris/Documents/DroolsRule.g:55:4: ( declaration )*
                 loop1:
                 while (true) {
                     int alt1 = 2;
                     alt1 = dfa1.predict(input);
                     switch (alt1) {
-                        case 1: // C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:55:4: declaration
+                        case 1: // /home/dcnorris/Documents/DroolsRule.g:55:4: declaration
                         {
                             pushFollow(FOLLOW_declaration_in_program66);
                             declaration1 = declaration();
@@ -152,7 +153,7 @@ public class DroolsRuleParser extends Parser {
                     }
                 }
 
-                // C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:55:17: ( WS )*
+                // /home/dcnorris/Documents/DroolsRule.g:55:17: ( WS )*
                 loop2:
                 while (true) {
                     int alt2 = 2;
@@ -162,7 +163,7 @@ public class DroolsRuleParser extends Parser {
                     }
 
                     switch (alt2) {
-                        case 1: // C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:55:17: WS
+                        case 1: // /home/dcnorris/Documents/DroolsRule.g:55:17: WS
                         {
                             WS2 = (Token) match(input, WS, FOLLOW_WS_in_program69);
                             if (state.failed) {
@@ -215,7 +216,7 @@ public class DroolsRuleParser extends Parser {
     };
 
     // $ANTLR start "declaration"
-    // C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:58:1: declaration : ( WS !)* ( packageDeclaration | importDeclaration | globalDeclaration | dialectDeclaration | typeDeclaration | ruleDeclaration ) ( WS !)* ( SEMICOLON )? ;
+    // /home/dcnorris/Documents/DroolsRule.g:58:1: declaration : ( WS !)* ( packageDeclaration | importDeclaration | globalDeclaration | dialectDeclaration | typeDeclaration | ruleDeclaration ) ( WS !)* ( SEMICOLON )? ;
     public final DroolsRuleParser.declaration_return declaration() throws RecognitionException {
         DroolsRuleParser.declaration_return retval = new DroolsRuleParser.declaration_return();
         retval.start = input.LT(1);
@@ -242,12 +243,12 @@ public class DroolsRuleParser extends Parser {
                 return retval;
             }
 
-            // C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:59:2: ( ( WS !)* ( packageDeclaration | importDeclaration | globalDeclaration | dialectDeclaration | typeDeclaration | ruleDeclaration ) ( WS !)* ( SEMICOLON )? )
-            // C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:59:4: ( WS !)* ( packageDeclaration | importDeclaration | globalDeclaration | dialectDeclaration | typeDeclaration | ruleDeclaration ) ( WS !)* ( SEMICOLON )?
+            // /home/dcnorris/Documents/DroolsRule.g:59:2: ( ( WS !)* ( packageDeclaration | importDeclaration | globalDeclaration | dialectDeclaration | typeDeclaration | ruleDeclaration ) ( WS !)* ( SEMICOLON )? )
+            // /home/dcnorris/Documents/DroolsRule.g:59:4: ( WS !)* ( packageDeclaration | importDeclaration | globalDeclaration | dialectDeclaration | typeDeclaration | ruleDeclaration ) ( WS !)* ( SEMICOLON )?
             {
                 root_0 = (Object) adaptor.nil();
 
-                // C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:59:6: ( WS !)*
+                // /home/dcnorris/Documents/DroolsRule.g:59:6: ( WS !)*
                 loop3:
                 while (true) {
                     int alt3 = 2;
@@ -257,7 +258,7 @@ public class DroolsRuleParser extends Parser {
                     }
 
                     switch (alt3) {
-                        case 1: // C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:59:6: WS !
+                        case 1: // /home/dcnorris/Documents/DroolsRule.g:59:6: WS !
                         {
                             WS3 = (Token) match(input, WS, FOLLOW_WS_in_declaration82);
                             if (state.failed) {
@@ -271,7 +272,7 @@ public class DroolsRuleParser extends Parser {
                     }
                 }
 
-                // C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:60:3: ( packageDeclaration | importDeclaration | globalDeclaration | dialectDeclaration | typeDeclaration | ruleDeclaration )
+                // /home/dcnorris/Documents/DroolsRule.g:60:3: ( packageDeclaration | importDeclaration | globalDeclaration | dialectDeclaration | typeDeclaration | ruleDeclaration )
                 int alt4 = 6;
                 switch (input.LA(1)) {
                     case PACKAGE: {
@@ -308,7 +309,7 @@ public class DroolsRuleParser extends Parser {
                         throw nvae;
                 }
                 switch (alt4) {
-                    case 1: // C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:60:5: packageDeclaration
+                    case 1: // /home/dcnorris/Documents/DroolsRule.g:60:5: packageDeclaration
                     {
                         pushFollow(FOLLOW_packageDeclaration_in_declaration90);
                         packageDeclaration4 = packageDeclaration();
@@ -322,7 +323,7 @@ public class DroolsRuleParser extends Parser {
 
                     }
                     break;
-                    case 2: // C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:60:26: importDeclaration
+                    case 2: // /home/dcnorris/Documents/DroolsRule.g:60:26: importDeclaration
                     {
                         pushFollow(FOLLOW_importDeclaration_in_declaration94);
                         importDeclaration5 = importDeclaration();
@@ -336,7 +337,7 @@ public class DroolsRuleParser extends Parser {
 
                     }
                     break;
-                    case 3: // C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:60:46: globalDeclaration
+                    case 3: // /home/dcnorris/Documents/DroolsRule.g:60:46: globalDeclaration
                     {
                         pushFollow(FOLLOW_globalDeclaration_in_declaration98);
                         globalDeclaration6 = globalDeclaration();
@@ -350,7 +351,7 @@ public class DroolsRuleParser extends Parser {
 
                     }
                     break;
-                    case 4: // C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:60:66: dialectDeclaration
+                    case 4: // /home/dcnorris/Documents/DroolsRule.g:60:66: dialectDeclaration
                     {
                         pushFollow(FOLLOW_dialectDeclaration_in_declaration102);
                         dialectDeclaration7 = dialectDeclaration();
@@ -364,7 +365,7 @@ public class DroolsRuleParser extends Parser {
 
                     }
                     break;
-                    case 5: // C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:60:87: typeDeclaration
+                    case 5: // /home/dcnorris/Documents/DroolsRule.g:60:87: typeDeclaration
                     {
                         pushFollow(FOLLOW_typeDeclaration_in_declaration106);
                         typeDeclaration8 = typeDeclaration();
@@ -378,7 +379,7 @@ public class DroolsRuleParser extends Parser {
 
                     }
                     break;
-                    case 6: // C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:60:105: ruleDeclaration
+                    case 6: // /home/dcnorris/Documents/DroolsRule.g:60:105: ruleDeclaration
                     {
                         pushFollow(FOLLOW_ruleDeclaration_in_declaration110);
                         ruleDeclaration9 = ruleDeclaration();
@@ -395,7 +396,7 @@ public class DroolsRuleParser extends Parser {
 
                 }
 
-                // C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:61:5: ( WS !)*
+                // /home/dcnorris/Documents/DroolsRule.g:61:5: ( WS !)*
                 loop5:
                 while (true) {
                     int alt5 = 2;
@@ -409,7 +410,7 @@ public class DroolsRuleParser extends Parser {
                     }
 
                     switch (alt5) {
-                        case 1: // C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:61:5: WS !
+                        case 1: // /home/dcnorris/Documents/DroolsRule.g:61:5: WS !
                         {
                             WS10 = (Token) match(input, WS, FOLLOW_WS_in_declaration116);
                             if (state.failed) {
@@ -423,14 +424,14 @@ public class DroolsRuleParser extends Parser {
                     }
                 }
 
-                // C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:61:8: ( SEMICOLON )?
+                // /home/dcnorris/Documents/DroolsRule.g:61:8: ( SEMICOLON )?
                 int alt6 = 2;
                 int LA6_0 = input.LA(1);
                 if ((LA6_0 == SEMICOLON)) {
                     alt6 = 1;
                 }
                 switch (alt6) {
-                    case 1: // C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:61:8: SEMICOLON
+                    case 1: // /home/dcnorris/Documents/DroolsRule.g:61:8: SEMICOLON
                     {
                         SEMICOLON11 = (Token) match(input, SEMICOLON, FOLLOW_SEMICOLON_in_declaration120);
                         if (state.failed) {
@@ -480,7 +481,7 @@ public class DroolsRuleParser extends Parser {
     };
 
     // $ANTLR start "packageDeclaration"
-    // C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:64:1: packageDeclaration : PACKAGE ( WS !)+ FQN ;
+    // /home/dcnorris/Documents/DroolsRule.g:64:1: packageDeclaration : PACKAGE ( WS !)+ FQN ;
     public final DroolsRuleParser.packageDeclaration_return packageDeclaration() throws RecognitionException {
         DroolsRuleParser.packageDeclaration_return retval = new DroolsRuleParser.packageDeclaration_return();
         retval.start = input.LT(1);
@@ -501,8 +502,8 @@ public class DroolsRuleParser extends Parser {
                 return retval;
             }
 
-            // C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:65:2: ( PACKAGE ( WS !)+ FQN )
-            // C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:65:5: PACKAGE ( WS !)+ FQN
+            // /home/dcnorris/Documents/DroolsRule.g:65:2: ( PACKAGE ( WS !)+ FQN )
+            // /home/dcnorris/Documents/DroolsRule.g:65:5: PACKAGE ( WS !)+ FQN
             {
                 root_0 = (Object) adaptor.nil();
 
@@ -515,7 +516,7 @@ public class DroolsRuleParser extends Parser {
                     adaptor.addChild(root_0, PACKAGE12_tree);
                 }
 
-                // C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:65:15: ( WS !)+
+                // /home/dcnorris/Documents/DroolsRule.g:65:15: ( WS !)+
                 int cnt7 = 0;
                 loop7:
                 while (true) {
@@ -526,7 +527,7 @@ public class DroolsRuleParser extends Parser {
                     }
 
                     switch (alt7) {
-                        case 1: // C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:65:15: WS !
+                        case 1: // /home/dcnorris/Documents/DroolsRule.g:65:15: WS !
                         {
                             WS13 = (Token) match(input, WS, FOLLOW_WS_in_packageDeclaration135);
                             if (state.failed) {
@@ -592,7 +593,7 @@ public class DroolsRuleParser extends Parser {
     };
 
     // $ANTLR start "dialectDeclaration"
-    // C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:68:1: dialectDeclaration : DIALECT ( WS !)+ STRING ;
+    // /home/dcnorris/Documents/DroolsRule.g:68:1: dialectDeclaration : DIALECT ( WS !)+ STRING ;
     public final DroolsRuleParser.dialectDeclaration_return dialectDeclaration() throws RecognitionException {
         DroolsRuleParser.dialectDeclaration_return retval = new DroolsRuleParser.dialectDeclaration_return();
         retval.start = input.LT(1);
@@ -613,8 +614,8 @@ public class DroolsRuleParser extends Parser {
                 return retval;
             }
 
-            // C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:69:2: ( DIALECT ( WS !)+ STRING )
-            // C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:69:4: DIALECT ( WS !)+ STRING
+            // /home/dcnorris/Documents/DroolsRule.g:69:2: ( DIALECT ( WS !)+ STRING )
+            // /home/dcnorris/Documents/DroolsRule.g:69:4: DIALECT ( WS !)+ STRING
             {
                 root_0 = (Object) adaptor.nil();
 
@@ -627,7 +628,7 @@ public class DroolsRuleParser extends Parser {
                     adaptor.addChild(root_0, DIALECT15_tree);
                 }
 
-                // C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:69:14: ( WS !)+
+                // /home/dcnorris/Documents/DroolsRule.g:69:14: ( WS !)+
                 int cnt8 = 0;
                 loop8:
                 while (true) {
@@ -638,7 +639,7 @@ public class DroolsRuleParser extends Parser {
                     }
 
                     switch (alt8) {
-                        case 1: // C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:69:14: WS !
+                        case 1: // /home/dcnorris/Documents/DroolsRule.g:69:14: WS !
                         {
                             WS16 = (Token) match(input, WS, FOLLOW_WS_in_dialectDeclaration154);
                             if (state.failed) {
@@ -704,7 +705,7 @@ public class DroolsRuleParser extends Parser {
     };
 
     // $ANTLR start "importDeclaration"
-    // C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:72:1: importDeclaration : IMPORT ( WS !)+ FQN ;
+    // /home/dcnorris/Documents/DroolsRule.g:72:1: importDeclaration : IMPORT ( WS !)+ FQN ;
     public final DroolsRuleParser.importDeclaration_return importDeclaration() throws RecognitionException {
         DroolsRuleParser.importDeclaration_return retval = new DroolsRuleParser.importDeclaration_return();
         retval.start = input.LT(1);
@@ -725,8 +726,8 @@ public class DroolsRuleParser extends Parser {
                 return retval;
             }
 
-            // C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:73:2: ( IMPORT ( WS !)+ FQN )
-            // C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:73:4: IMPORT ( WS !)+ FQN
+            // /home/dcnorris/Documents/DroolsRule.g:73:2: ( IMPORT ( WS !)+ FQN )
+            // /home/dcnorris/Documents/DroolsRule.g:73:4: IMPORT ( WS !)+ FQN
             {
                 root_0 = (Object) adaptor.nil();
 
@@ -739,7 +740,7 @@ public class DroolsRuleParser extends Parser {
                     adaptor.addChild(root_0, IMPORT18_tree);
                 }
 
-                // C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:73:13: ( WS !)+
+                // /home/dcnorris/Documents/DroolsRule.g:73:13: ( WS !)+
                 int cnt9 = 0;
                 loop9:
                 while (true) {
@@ -750,7 +751,7 @@ public class DroolsRuleParser extends Parser {
                     }
 
                     switch (alt9) {
-                        case 1: // C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:73:13: WS !
+                        case 1: // /home/dcnorris/Documents/DroolsRule.g:73:13: WS !
                         {
                             WS19 = (Token) match(input, WS, FOLLOW_WS_in_importDeclaration172);
                             if (state.failed) {
@@ -816,7 +817,7 @@ public class DroolsRuleParser extends Parser {
     };
 
     // $ANTLR start "globalDeclaration"
-    // C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:76:1: globalDeclaration : GLOBAL ( WS )+ FQN ( WS )+ ID -> GLOBAL FQN ID ;
+    // /home/dcnorris/Documents/DroolsRule.g:76:1: globalDeclaration : GLOBAL ( WS )+ FQN ( WS )+ ID -> GLOBAL FQN ID ;
     public final DroolsRuleParser.globalDeclaration_return globalDeclaration() throws RecognitionException {
         DroolsRuleParser.globalDeclaration_return retval = new DroolsRuleParser.globalDeclaration_return();
         retval.start = input.LT(1);
@@ -835,18 +836,18 @@ public class DroolsRuleParser extends Parser {
         Object FQN23_tree = null;
         Object WS24_tree = null;
         Object ID25_tree = null;
-        RewriteRuleTokenStream stream_WS = new RewriteRuleTokenStream(adaptor, "token WS");
+        RewriteRuleTokenStream stream_FQN = new RewriteRuleTokenStream(adaptor, "token FQN");
         RewriteRuleTokenStream stream_GLOBAL = new RewriteRuleTokenStream(adaptor, "token GLOBAL");
         RewriteRuleTokenStream stream_ID = new RewriteRuleTokenStream(adaptor, "token ID");
-        RewriteRuleTokenStream stream_FQN = new RewriteRuleTokenStream(adaptor, "token FQN");
+        RewriteRuleTokenStream stream_WS = new RewriteRuleTokenStream(adaptor, "token WS");
 
         try {
             if (state.backtracking > 0 && alreadyParsedRule(input, 6)) {
                 return retval;
             }
 
-            // C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:77:2: ( GLOBAL ( WS )+ FQN ( WS )+ ID -> GLOBAL FQN ID )
-            // C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:77:4: GLOBAL ( WS )+ FQN ( WS )+ ID
+            // /home/dcnorris/Documents/DroolsRule.g:77:2: ( GLOBAL ( WS )+ FQN ( WS )+ ID -> GLOBAL FQN ID )
+            // /home/dcnorris/Documents/DroolsRule.g:77:4: GLOBAL ( WS )+ FQN ( WS )+ ID
             {
                 GLOBAL21 = (Token) match(input, GLOBAL, FOLLOW_GLOBAL_in_globalDeclaration188);
                 if (state.failed) {
@@ -856,7 +857,7 @@ public class DroolsRuleParser extends Parser {
                     stream_GLOBAL.add(GLOBAL21);
                 }
 
-                // C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:77:11: ( WS )+
+                // /home/dcnorris/Documents/DroolsRule.g:77:11: ( WS )+
                 int cnt10 = 0;
                 loop10:
                 while (true) {
@@ -867,7 +868,7 @@ public class DroolsRuleParser extends Parser {
                     }
 
                     switch (alt10) {
-                        case 1: // C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:77:11: WS
+                        case 1: // /home/dcnorris/Documents/DroolsRule.g:77:11: WS
                         {
                             WS22 = (Token) match(input, WS, FOLLOW_WS_in_globalDeclaration190);
                             if (state.failed) {
@@ -902,7 +903,7 @@ public class DroolsRuleParser extends Parser {
                     stream_FQN.add(FQN23);
                 }
 
-                // C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:77:19: ( WS )+
+                // /home/dcnorris/Documents/DroolsRule.g:77:19: ( WS )+
                 int cnt11 = 0;
                 loop11:
                 while (true) {
@@ -913,7 +914,7 @@ public class DroolsRuleParser extends Parser {
                     }
 
                     switch (alt11) {
-                        case 1: // C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:77:19: WS
+                        case 1: // /home/dcnorris/Documents/DroolsRule.g:77:19: WS
                         {
                             WS24 = (Token) match(input, WS, FOLLOW_WS_in_globalDeclaration195);
                             if (state.failed) {
@@ -949,7 +950,7 @@ public class DroolsRuleParser extends Parser {
                 }
 
                 // AST REWRITE
-                // elements: ID, FQN, GLOBAL
+                // elements: GLOBAL, FQN, ID
                 // token labels: 
                 // rule labels: retval
                 // token list labels: 
@@ -1004,7 +1005,7 @@ public class DroolsRuleParser extends Parser {
     };
 
     // $ANTLR start "typeDeclaration"
-    // C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:81:1: typeDeclaration : DECLARE ( WS !)+ ID ( WS !)+ ( EXTENDS FQN )? ( ( WS )* memberDeclaration )* ( WS )+ END ;
+    // /home/dcnorris/Documents/DroolsRule.g:81:1: typeDeclaration : DECLARE ( WS !)+ ID ( WS !)+ ( EXTENDS FQN )? ( ( WS )* memberDeclaration )* ( WS )+ END ;
     public final DroolsRuleParser.typeDeclaration_return typeDeclaration() throws RecognitionException {
         DroolsRuleParser.typeDeclaration_return retval = new DroolsRuleParser.typeDeclaration_return();
         retval.start = input.LT(1);
@@ -1038,8 +1039,8 @@ public class DroolsRuleParser extends Parser {
                 return retval;
             }
 
-            // C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:82:2: ( DECLARE ( WS !)+ ID ( WS !)+ ( EXTENDS FQN )? ( ( WS )* memberDeclaration )* ( WS )+ END )
-            // C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:82:4: DECLARE ( WS !)+ ID ( WS !)+ ( EXTENDS FQN )? ( ( WS )* memberDeclaration )* ( WS )+ END
+            // /home/dcnorris/Documents/DroolsRule.g:82:2: ( DECLARE ( WS !)+ ID ( WS !)+ ( EXTENDS FQN )? ( ( WS )* memberDeclaration )* ( WS )+ END )
+            // /home/dcnorris/Documents/DroolsRule.g:82:4: DECLARE ( WS !)+ ID ( WS !)+ ( EXTENDS FQN )? ( ( WS )* memberDeclaration )* ( WS )+ END
             {
                 root_0 = (Object) adaptor.nil();
 
@@ -1052,7 +1053,7 @@ public class DroolsRuleParser extends Parser {
                     adaptor.addChild(root_0, DECLARE26_tree);
                 }
 
-                // C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:82:14: ( WS !)+
+                // /home/dcnorris/Documents/DroolsRule.g:82:14: ( WS !)+
                 int cnt12 = 0;
                 loop12:
                 while (true) {
@@ -1063,7 +1064,7 @@ public class DroolsRuleParser extends Parser {
                     }
 
                     switch (alt12) {
-                        case 1: // C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:82:14: WS !
+                        case 1: // /home/dcnorris/Documents/DroolsRule.g:82:14: WS !
                         {
                             WS27 = (Token) match(input, WS, FOLLOW_WS_in_typeDeclaration221);
                             if (state.failed) {
@@ -1095,7 +1096,7 @@ public class DroolsRuleParser extends Parser {
                     adaptor.addChild(root_0, ID28_tree);
                 }
 
-                // C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:82:22: ( WS !)+
+                // /home/dcnorris/Documents/DroolsRule.g:82:22: ( WS !)+
                 int cnt13 = 0;
                 loop13:
                 while (true) {
@@ -1110,7 +1111,7 @@ public class DroolsRuleParser extends Parser {
                     }
 
                     switch (alt13) {
-                        case 1: // C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:82:22: WS !
+                        case 1: // /home/dcnorris/Documents/DroolsRule.g:82:22: WS !
                         {
                             WS29 = (Token) match(input, WS, FOLLOW_WS_in_typeDeclaration227);
                             if (state.failed) {
@@ -1133,14 +1134,14 @@ public class DroolsRuleParser extends Parser {
                     cnt13++;
                 }
 
-                // C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:82:25: ( EXTENDS FQN )?
+                // /home/dcnorris/Documents/DroolsRule.g:82:25: ( EXTENDS FQN )?
                 int alt14 = 2;
                 int LA14_0 = input.LA(1);
                 if ((LA14_0 == EXTENDS)) {
                     alt14 = 1;
                 }
                 switch (alt14) {
-                    case 1: // C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:82:26: EXTENDS FQN
+                    case 1: // /home/dcnorris/Documents/DroolsRule.g:82:26: EXTENDS FQN
                     {
                         EXTENDS30 = (Token) match(input, EXTENDS, FOLLOW_EXTENDS_in_typeDeclaration232);
                         if (state.failed) {
@@ -1165,15 +1166,15 @@ public class DroolsRuleParser extends Parser {
 
                 }
 
-                // C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:82:40: ( ( WS )* memberDeclaration )*
+                // /home/dcnorris/Documents/DroolsRule.g:82:40: ( ( WS )* memberDeclaration )*
                 loop16:
                 while (true) {
                     int alt16 = 2;
                     alt16 = dfa16.predict(input);
                     switch (alt16) {
-                        case 1: // C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:82:41: ( WS )* memberDeclaration
+                        case 1: // /home/dcnorris/Documents/DroolsRule.g:82:41: ( WS )* memberDeclaration
                         {
-                            // C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:82:41: ( WS )*
+                            // /home/dcnorris/Documents/DroolsRule.g:82:41: ( WS )*
                             loop15:
                             while (true) {
                                 int alt15 = 2;
@@ -1183,7 +1184,7 @@ public class DroolsRuleParser extends Parser {
                                 }
 
                                 switch (alt15) {
-                                    case 1: // C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:82:41: WS
+                                    case 1: // /home/dcnorris/Documents/DroolsRule.g:82:41: WS
                                     {
                                         WS32 = (Token) match(input, WS, FOLLOW_WS_in_typeDeclaration239);
                                         if (state.failed) {
@@ -1220,7 +1221,7 @@ public class DroolsRuleParser extends Parser {
                     }
                 }
 
-                // C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:82:65: ( WS )+
+                // /home/dcnorris/Documents/DroolsRule.g:82:65: ( WS )+
                 int cnt17 = 0;
                 loop17:
                 while (true) {
@@ -1231,7 +1232,7 @@ public class DroolsRuleParser extends Parser {
                     }
 
                     switch (alt17) {
-                        case 1: // C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:82:65: WS
+                        case 1: // /home/dcnorris/Documents/DroolsRule.g:82:65: WS
                         {
                             WS34 = (Token) match(input, WS, FOLLOW_WS_in_typeDeclaration246);
                             if (state.failed) {
@@ -1302,7 +1303,7 @@ public class DroolsRuleParser extends Parser {
     };
 
     // $ANTLR start "memberDeclaration"
-    // C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:85:1: memberDeclaration : ID ( WS !)* COLON ( WS !)* ( PRIMITIVE | FQN ) ;
+    // /home/dcnorris/Documents/DroolsRule.g:85:1: memberDeclaration : ID ( WS !)* COLON ( WS !)* ( PRIMITIVE | FQN ) ;
     public final DroolsRuleParser.memberDeclaration_return memberDeclaration() throws RecognitionException {
         DroolsRuleParser.memberDeclaration_return retval = new DroolsRuleParser.memberDeclaration_return();
         retval.start = input.LT(1);
@@ -1327,8 +1328,8 @@ public class DroolsRuleParser extends Parser {
                 return retval;
             }
 
-            // C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:86:2: ( ID ( WS !)* COLON ( WS !)* ( PRIMITIVE | FQN ) )
-            // C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:86:4: ID ( WS !)* COLON ( WS !)* ( PRIMITIVE | FQN )
+            // /home/dcnorris/Documents/DroolsRule.g:86:2: ( ID ( WS !)* COLON ( WS !)* ( PRIMITIVE | FQN ) )
+            // /home/dcnorris/Documents/DroolsRule.g:86:4: ID ( WS !)* COLON ( WS !)* ( PRIMITIVE | FQN )
             {
                 root_0 = (Object) adaptor.nil();
 
@@ -1341,7 +1342,7 @@ public class DroolsRuleParser extends Parser {
                     adaptor.addChild(root_0, ID36_tree);
                 }
 
-                // C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:86:9: ( WS !)*
+                // /home/dcnorris/Documents/DroolsRule.g:86:9: ( WS !)*
                 loop18:
                 while (true) {
                     int alt18 = 2;
@@ -1351,7 +1352,7 @@ public class DroolsRuleParser extends Parser {
                     }
 
                     switch (alt18) {
-                        case 1: // C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:86:9: WS !
+                        case 1: // /home/dcnorris/Documents/DroolsRule.g:86:9: WS !
                         {
                             WS37 = (Token) match(input, WS, FOLLOW_WS_in_memberDeclaration263);
                             if (state.failed) {
@@ -1374,7 +1375,7 @@ public class DroolsRuleParser extends Parser {
                     adaptor.addChild(root_0, COLON38_tree);
                 }
 
-                // C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:86:20: ( WS !)*
+                // /home/dcnorris/Documents/DroolsRule.g:86:20: ( WS !)*
                 loop19:
                 while (true) {
                     int alt19 = 2;
@@ -1384,7 +1385,7 @@ public class DroolsRuleParser extends Parser {
                     }
 
                     switch (alt19) {
-                        case 1: // C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:86:20: WS !
+                        case 1: // /home/dcnorris/Documents/DroolsRule.g:86:20: WS !
                         {
                             WS39 = (Token) match(input, WS, FOLLOW_WS_in_memberDeclaration269);
                             if (state.failed) {
@@ -1448,7 +1449,7 @@ public class DroolsRuleParser extends Parser {
     };
 
     // $ANTLR start "ruleDeclaration"
-    // C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:89:1: ruleDeclaration : RULE ( WS !)+ ( STRING ( WS !)+ )? WHEN ( WS !)+ ruleLHS THEN ( WS !)+ ruleRHS END ;
+    // /home/dcnorris/Documents/DroolsRule.g:89:1: ruleDeclaration : RULE ( WS !)+ ( STRING ( WS !)+ )? WHEN ( WS !)+ ruleLHS THEN ( WS !)+ ruleRHS END ;
     public final DroolsRuleParser.ruleDeclaration_return ruleDeclaration() throws RecognitionException {
         DroolsRuleParser.ruleDeclaration_return retval = new DroolsRuleParser.ruleDeclaration_return();
         retval.start = input.LT(1);
@@ -1483,6 +1484,8 @@ public class DroolsRuleParser extends Parser {
                 return retval;
             }
 
+            // /home/dcnorris/Documents/DroolsRule.g:90:2: ( RULE ( WS !)+ ( STRING ( WS !)+ )? WHEN ( WS !)+ ruleLHS THEN ( WS !)+ ruleRHS END )
+            // /home/dcnorris/Documents/DroolsRule.g:90:4: RULE ( WS !)+ ( STRING ( WS !)+ )? WHEN ( WS !)+ ruleLHS THEN ( WS !)+ ruleRHS END
             {
                 root_0 = (Object) adaptor.nil();
 
@@ -1495,6 +1498,7 @@ public class DroolsRuleParser extends Parser {
                     adaptor.addChild(root_0, RULE41_tree);
                 }
 
+                // /home/dcnorris/Documents/DroolsRule.g:90:11: ( WS !)+
                 int cnt20 = 0;
                 loop20:
                 while (true) {
@@ -1505,7 +1509,8 @@ public class DroolsRuleParser extends Parser {
                     }
 
                     switch (alt20) {
-                        case 1: {
+                        case 1: // /home/dcnorris/Documents/DroolsRule.g:90:11: WS !
+                        {
                             WS42 = (Token) match(input, WS, FOLLOW_WS_in_ruleDeclaration292);
                             if (state.failed) {
                                 return retval;
@@ -1527,13 +1532,15 @@ public class DroolsRuleParser extends Parser {
                     cnt20++;
                 }
 
+                // /home/dcnorris/Documents/DroolsRule.g:90:14: ( STRING ( WS !)+ )?
                 int alt22 = 2;
                 int LA22_0 = input.LA(1);
                 if ((LA22_0 == STRING)) {
                     alt22 = 1;
                 }
                 switch (alt22) {
-                    case 1: {
+                    case 1: // /home/dcnorris/Documents/DroolsRule.g:90:15: STRING ( WS !)+
+                    {
                         STRING43 = (Token) match(input, STRING, FOLLOW_STRING_in_ruleDeclaration297);
                         if (state.failed) {
                             return retval;
@@ -1543,6 +1550,7 @@ public class DroolsRuleParser extends Parser {
                             adaptor.addChild(root_0, STRING43_tree);
                         }
 
+                        // /home/dcnorris/Documents/DroolsRule.g:90:24: ( WS !)+
                         int cnt21 = 0;
                         loop21:
                         while (true) {
@@ -1553,7 +1561,8 @@ public class DroolsRuleParser extends Parser {
                             }
 
                             switch (alt21) {
-                                case 1: {
+                                case 1: // /home/dcnorris/Documents/DroolsRule.g:90:24: WS !
+                                {
                                     WS44 = (Token) match(input, WS, FOLLOW_WS_in_ruleDeclaration299);
                                     if (state.failed) {
                                         return retval;
@@ -1589,6 +1598,7 @@ public class DroolsRuleParser extends Parser {
                     adaptor.addChild(root_0, WHEN45_tree);
                 }
 
+                // /home/dcnorris/Documents/DroolsRule.g:90:36: ( WS !)+
                 int cnt23 = 0;
                 loop23:
                 while (true) {
@@ -1599,7 +1609,8 @@ public class DroolsRuleParser extends Parser {
                     }
 
                     switch (alt23) {
-                        case 1: {
+                        case 1: // /home/dcnorris/Documents/DroolsRule.g:90:36: WS !
+                        {
                             WS46 = (Token) match(input, WS, FOLLOW_WS_in_ruleDeclaration307);
                             if (state.failed) {
                                 return retval;
@@ -1640,7 +1651,7 @@ public class DroolsRuleParser extends Parser {
                     adaptor.addChild(root_0, THEN48_tree);
                 }
 
-                // C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:90:54: ( WS !)+
+                // /home/dcnorris/Documents/DroolsRule.g:90:54: ( WS !)+
                 int cnt24 = 0;
                 loop24:
                 while (true) {
@@ -1651,7 +1662,7 @@ public class DroolsRuleParser extends Parser {
                     }
 
                     switch (alt24) {
-                        case 1: // C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:90:54: WS !
+                        case 1: // /home/dcnorris/Documents/DroolsRule.g:90:54: WS !
                         {
                             WS49 = (Token) match(input, WS, FOLLOW_WS_in_ruleDeclaration315);
                             if (state.failed) {
@@ -1727,7 +1738,7 @@ public class DroolsRuleParser extends Parser {
     };
 
     // $ANTLR start "ruleLHS"
-    // C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:93:1: ruleLHS :;
+    // /home/dcnorris/Documents/DroolsRule.g:93:1: ruleLHS :;
     public final DroolsRuleParser.ruleLHS_return ruleLHS() throws RecognitionException {
         DroolsRuleParser.ruleLHS_return retval = new DroolsRuleParser.ruleLHS_return();
         retval.start = input.LT(1);
@@ -1740,8 +1751,8 @@ public class DroolsRuleParser extends Parser {
                 return retval;
             }
 
-            // C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:94:2: ()
-            // C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:95:2: 
+            // /home/dcnorris/Documents/DroolsRule.g:94:2: ()
+            // /home/dcnorris/Documents/DroolsRule.g:95:2: 
             {
                 root_0 = (Object) adaptor.nil();
 
@@ -1775,7 +1786,7 @@ public class DroolsRuleParser extends Parser {
     };
 
     // $ANTLR start "ruleRHS"
-    // C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:97:1: ruleRHS :;
+    // /home/dcnorris/Documents/DroolsRule.g:97:1: ruleRHS :;
     public final DroolsRuleParser.ruleRHS_return ruleRHS() throws RecognitionException {
         DroolsRuleParser.ruleRHS_return retval = new DroolsRuleParser.ruleRHS_return();
         retval.start = input.LT(1);
@@ -1788,8 +1799,8 @@ public class DroolsRuleParser extends Parser {
                 return retval;
             }
 
-            // C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:98:2: ()
-            // C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:99:2: 
+            // /home/dcnorris/Documents/DroolsRule.g:98:2: ()
+            // /home/dcnorris/Documents/DroolsRule.g:99:2: 
             {
                 root_0 = (Object) adaptor.nil();
 
@@ -1814,8 +1825,8 @@ public class DroolsRuleParser extends Parser {
 
     // $ANTLR start synpred9_DroolsRule
     public final void synpred9_DroolsRule_fragment() throws RecognitionException {
-        // C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:61:5: ( WS )
-        // C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:61:5: WS
+        // /home/dcnorris/Documents/DroolsRule.g:61:5: ( WS )
+        // /home/dcnorris/Documents/DroolsRule.g:61:5: WS
         {
             match(input, WS, FOLLOW_WS_in_synpred9_DroolsRule116);
             if (state.failed) {
@@ -1829,8 +1840,8 @@ public class DroolsRuleParser extends Parser {
 
     // $ANTLR start synpred17_DroolsRule
     public final void synpred17_DroolsRule_fragment() throws RecognitionException {
-        // C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:82:22: ( WS )
-        // C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:82:22: WS
+        // /home/dcnorris/Documents/DroolsRule.g:82:22: ( WS )
+        // /home/dcnorris/Documents/DroolsRule.g:82:22: WS
         {
             match(input, WS, FOLLOW_WS_in_synpred17_DroolsRule227);
             if (state.failed) {
@@ -1882,14 +1893,14 @@ public class DroolsRuleParser extends Parser {
     static final String DFA1_minS
             = "\2\7\2\uffff";
     static final String DFA1_maxS
-            = "\2\44\2\uffff";
+            = "\2\45\2\uffff";
     static final String DFA1_acceptS
             = "\2\uffff\1\2\1\1";
     static final String DFA1_specialS
             = "\4\uffff}>";
     static final String[] DFA1_transitionS = {
-        "\2\3\6\uffff\1\3\2\uffff\1\3\6\uffff\1\3\1\uffff\1\3\10\uffff\1\1",
-        "\2\3\6\uffff\1\3\2\uffff\1\3\6\uffff\1\3\1\uffff\1\3\10\uffff\1\1",
+        "\2\3\6\uffff\1\3\2\uffff\1\3\7\uffff\1\3\1\uffff\1\3\10\uffff\1\1",
+        "\2\3\6\uffff\1\3\2\uffff\1\3\7\uffff\1\3\1\uffff\1\3\10\uffff\1\1",
         "",
         ""
     };
@@ -1937,14 +1948,14 @@ public class DroolsRuleParser extends Parser {
     static final String DFA16_minS
             = "\1\21\1\11\2\uffff";
     static final String DFA16_maxS
-            = "\2\44\2\uffff";
+            = "\2\45\2\uffff";
     static final String DFA16_acceptS
             = "\2\uffff\1\1\1\2";
     static final String DFA16_specialS
             = "\4\uffff}>";
     static final String[] DFA16_transitionS = {
-        "\1\2\22\uffff\1\1",
-        "\1\3\7\uffff\1\2\22\uffff\1\1",
+        "\1\2\23\uffff\1\1",
+        "\1\3\7\uffff\1\2\23\uffff\1\1",
         "",
         ""
     };
@@ -1985,55 +1996,55 @@ public class DroolsRuleParser extends Parser {
         }
     }
 
-    public static final BitSet FOLLOW_declaration_in_program66 = new BitSet(new long[]{0x000000100A048182L});
-    public static final BitSet FOLLOW_WS_in_program69 = new BitSet(new long[]{0x0000001000000002L});
-    public static final BitSet FOLLOW_WS_in_declaration82 = new BitSet(new long[]{0x000000100A048180L});
-    public static final BitSet FOLLOW_packageDeclaration_in_declaration90 = new BitSet(new long[]{0x0000001020000002L});
-    public static final BitSet FOLLOW_importDeclaration_in_declaration94 = new BitSet(new long[]{0x0000001020000002L});
-    public static final BitSet FOLLOW_globalDeclaration_in_declaration98 = new BitSet(new long[]{0x0000001020000002L});
-    public static final BitSet FOLLOW_dialectDeclaration_in_declaration102 = new BitSet(new long[]{0x0000001020000002L});
-    public static final BitSet FOLLOW_typeDeclaration_in_declaration106 = new BitSet(new long[]{0x0000001020000002L});
-    public static final BitSet FOLLOW_ruleDeclaration_in_declaration110 = new BitSet(new long[]{0x0000001020000002L});
-    public static final BitSet FOLLOW_WS_in_declaration116 = new BitSet(new long[]{0x0000001020000002L});
+    public static final BitSet FOLLOW_declaration_in_program66 = new BitSet(new long[]{0x0000002014048182L});
+    public static final BitSet FOLLOW_WS_in_program69 = new BitSet(new long[]{0x0000002000000002L});
+    public static final BitSet FOLLOW_WS_in_declaration82 = new BitSet(new long[]{0x0000002014048180L});
+    public static final BitSet FOLLOW_packageDeclaration_in_declaration90 = new BitSet(new long[]{0x0000002040000002L});
+    public static final BitSet FOLLOW_importDeclaration_in_declaration94 = new BitSet(new long[]{0x0000002040000002L});
+    public static final BitSet FOLLOW_globalDeclaration_in_declaration98 = new BitSet(new long[]{0x0000002040000002L});
+    public static final BitSet FOLLOW_dialectDeclaration_in_declaration102 = new BitSet(new long[]{0x0000002040000002L});
+    public static final BitSet FOLLOW_typeDeclaration_in_declaration106 = new BitSet(new long[]{0x0000002040000002L});
+    public static final BitSet FOLLOW_ruleDeclaration_in_declaration110 = new BitSet(new long[]{0x0000002040000002L});
+    public static final BitSet FOLLOW_WS_in_declaration116 = new BitSet(new long[]{0x0000002040000002L});
     public static final BitSet FOLLOW_SEMICOLON_in_declaration120 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_PACKAGE_in_packageDeclaration133 = new BitSet(new long[]{0x0000001000000000L});
-    public static final BitSet FOLLOW_WS_in_packageDeclaration135 = new BitSet(new long[]{0x0000001000004000L});
+    public static final BitSet FOLLOW_PACKAGE_in_packageDeclaration133 = new BitSet(new long[]{0x0000002000000000L});
+    public static final BitSet FOLLOW_WS_in_packageDeclaration135 = new BitSet(new long[]{0x0000002000004000L});
     public static final BitSet FOLLOW_FQN_in_packageDeclaration139 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_DIALECT_in_dialectDeclaration152 = new BitSet(new long[]{0x0000001000000000L});
-    public static final BitSet FOLLOW_WS_in_dialectDeclaration154 = new BitSet(new long[]{0x0000001100000000L});
+    public static final BitSet FOLLOW_DIALECT_in_dialectDeclaration152 = new BitSet(new long[]{0x0000002000000000L});
+    public static final BitSet FOLLOW_WS_in_dialectDeclaration154 = new BitSet(new long[]{0x0000002200000000L});
     public static final BitSet FOLLOW_STRING_in_dialectDeclaration158 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_IMPORT_in_importDeclaration170 = new BitSet(new long[]{0x0000001000000000L});
-    public static final BitSet FOLLOW_WS_in_importDeclaration172 = new BitSet(new long[]{0x0000001000004000L});
+    public static final BitSet FOLLOW_IMPORT_in_importDeclaration170 = new BitSet(new long[]{0x0000002000000000L});
+    public static final BitSet FOLLOW_WS_in_importDeclaration172 = new BitSet(new long[]{0x0000002000004000L});
     public static final BitSet FOLLOW_FQN_in_importDeclaration176 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_GLOBAL_in_globalDeclaration188 = new BitSet(new long[]{0x0000001000000000L});
-    public static final BitSet FOLLOW_WS_in_globalDeclaration190 = new BitSet(new long[]{0x0000001000004000L});
-    public static final BitSet FOLLOW_FQN_in_globalDeclaration193 = new BitSet(new long[]{0x0000001000000000L});
-    public static final BitSet FOLLOW_WS_in_globalDeclaration195 = new BitSet(new long[]{0x0000001000020000L});
+    public static final BitSet FOLLOW_GLOBAL_in_globalDeclaration188 = new BitSet(new long[]{0x0000002000000000L});
+    public static final BitSet FOLLOW_WS_in_globalDeclaration190 = new BitSet(new long[]{0x0000002000004000L});
+    public static final BitSet FOLLOW_FQN_in_globalDeclaration193 = new BitSet(new long[]{0x0000002000000000L});
+    public static final BitSet FOLLOW_WS_in_globalDeclaration195 = new BitSet(new long[]{0x0000002000020000L});
     public static final BitSet FOLLOW_ID_in_globalDeclaration198 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_DECLARE_in_typeDeclaration219 = new BitSet(new long[]{0x0000001000000000L});
-    public static final BitSet FOLLOW_WS_in_typeDeclaration221 = new BitSet(new long[]{0x0000001000020000L});
-    public static final BitSet FOLLOW_ID_in_typeDeclaration225 = new BitSet(new long[]{0x0000001000000000L});
-    public static final BitSet FOLLOW_WS_in_typeDeclaration227 = new BitSet(new long[]{0x0000001000021000L});
+    public static final BitSet FOLLOW_DECLARE_in_typeDeclaration219 = new BitSet(new long[]{0x0000002000000000L});
+    public static final BitSet FOLLOW_WS_in_typeDeclaration221 = new BitSet(new long[]{0x0000002000020000L});
+    public static final BitSet FOLLOW_ID_in_typeDeclaration225 = new BitSet(new long[]{0x0000002000000000L});
+    public static final BitSet FOLLOW_WS_in_typeDeclaration227 = new BitSet(new long[]{0x0000002000021000L});
     public static final BitSet FOLLOW_EXTENDS_in_typeDeclaration232 = new BitSet(new long[]{0x0000000000004000L});
-    public static final BitSet FOLLOW_FQN_in_typeDeclaration234 = new BitSet(new long[]{0x0000001000020000L});
-    public static final BitSet FOLLOW_WS_in_typeDeclaration239 = new BitSet(new long[]{0x0000001000020000L});
-    public static final BitSet FOLLOW_memberDeclaration_in_typeDeclaration242 = new BitSet(new long[]{0x0000001000020000L});
-    public static final BitSet FOLLOW_WS_in_typeDeclaration246 = new BitSet(new long[]{0x0000001000000200L});
+    public static final BitSet FOLLOW_FQN_in_typeDeclaration234 = new BitSet(new long[]{0x0000002000020000L});
+    public static final BitSet FOLLOW_WS_in_typeDeclaration239 = new BitSet(new long[]{0x0000002000020000L});
+    public static final BitSet FOLLOW_memberDeclaration_in_typeDeclaration242 = new BitSet(new long[]{0x0000002000020000L});
+    public static final BitSet FOLLOW_WS_in_typeDeclaration246 = new BitSet(new long[]{0x0000002000000200L});
     public static final BitSet FOLLOW_END_in_typeDeclaration249 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ID_in_memberDeclaration261 = new BitSet(new long[]{0x0000001000000040L});
-    public static final BitSet FOLLOW_WS_in_memberDeclaration263 = new BitSet(new long[]{0x0000001000000040L});
-    public static final BitSet FOLLOW_COLON_in_memberDeclaration267 = new BitSet(new long[]{0x0000001004004000L});
-    public static final BitSet FOLLOW_WS_in_memberDeclaration269 = new BitSet(new long[]{0x0000001004004000L});
+    public static final BitSet FOLLOW_ID_in_memberDeclaration261 = new BitSet(new long[]{0x0000002000000040L});
+    public static final BitSet FOLLOW_WS_in_memberDeclaration263 = new BitSet(new long[]{0x0000002000000040L});
+    public static final BitSet FOLLOW_COLON_in_memberDeclaration267 = new BitSet(new long[]{0x0000002008004000L});
+    public static final BitSet FOLLOW_WS_in_memberDeclaration269 = new BitSet(new long[]{0x0000002008004000L});
     public static final BitSet FOLLOW_set_in_memberDeclaration273 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_in_ruleDeclaration290 = new BitSet(new long[]{0x0000001000000000L});
-    public static final BitSet FOLLOW_WS_in_ruleDeclaration292 = new BitSet(new long[]{0x0000001900000000L});
-    public static final BitSet FOLLOW_STRING_in_ruleDeclaration297 = new BitSet(new long[]{0x0000001000000000L});
-    public static final BitSet FOLLOW_WS_in_ruleDeclaration299 = new BitSet(new long[]{0x0000001800000000L});
-    public static final BitSet FOLLOW_WHEN_in_ruleDeclaration305 = new BitSet(new long[]{0x0000001000000000L});
-    public static final BitSet FOLLOW_WS_in_ruleDeclaration307 = new BitSet(new long[]{0x0000001200000000L});
-    public static final BitSet FOLLOW_ruleLHS_in_ruleDeclaration311 = new BitSet(new long[]{0x0000000200000000L});
-    public static final BitSet FOLLOW_THEN_in_ruleDeclaration313 = new BitSet(new long[]{0x0000001000000000L});
-    public static final BitSet FOLLOW_WS_in_ruleDeclaration315 = new BitSet(new long[]{0x0000001000000200L});
+    public static final BitSet FOLLOW_RULE_in_ruleDeclaration290 = new BitSet(new long[]{0x0000002000000000L});
+    public static final BitSet FOLLOW_WS_in_ruleDeclaration292 = new BitSet(new long[]{0x0000003200000000L});
+    public static final BitSet FOLLOW_STRING_in_ruleDeclaration297 = new BitSet(new long[]{0x0000002000000000L});
+    public static final BitSet FOLLOW_WS_in_ruleDeclaration299 = new BitSet(new long[]{0x0000003000000000L});
+    public static final BitSet FOLLOW_WHEN_in_ruleDeclaration305 = new BitSet(new long[]{0x0000002000000000L});
+    public static final BitSet FOLLOW_WS_in_ruleDeclaration307 = new BitSet(new long[]{0x0000002400000000L});
+    public static final BitSet FOLLOW_ruleLHS_in_ruleDeclaration311 = new BitSet(new long[]{0x0000000400000000L});
+    public static final BitSet FOLLOW_THEN_in_ruleDeclaration313 = new BitSet(new long[]{0x0000002000000000L});
+    public static final BitSet FOLLOW_WS_in_ruleDeclaration315 = new BitSet(new long[]{0x0000002000000200L});
     public static final BitSet FOLLOW_ruleRHS_in_ruleDeclaration319 = new BitSet(new long[]{0x0000000000000200L});
     public static final BitSet FOLLOW_END_in_ruleDeclaration321 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_WS_in_synpred9_DroolsRule116 = new BitSet(new long[]{0x0000000000000002L});

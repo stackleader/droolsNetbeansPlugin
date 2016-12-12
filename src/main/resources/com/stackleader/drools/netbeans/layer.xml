@@ -8,8 +8,8 @@
                 <folder name="FontsColors">
                     <folder name="NetBeans">
                         <folder name="Defaults">
-                            <file name="FontAndColors.xml">
-                                <attr name="displayName" bundlevalue="com.stackleader.drools.netbeans.Bundle#Editors/text/x-drools-rule/FontsColors/NetBeans/Defaults/FontAndColors.xml"/>
+                             <file name="FontAndColors.xml" url="FontAndColors.xml">
+                                  <attr name="SystemFileSystem.localizingBundle" stringvalue="com.stackleader.drools.netbeans.Bundle"/>
                             </file>
                         </folder>
                     </folder>
